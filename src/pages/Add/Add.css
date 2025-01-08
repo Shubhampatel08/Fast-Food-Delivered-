@@ -1,0 +1,67 @@
+.add {
+  margin-top: 50px;
+  margin-left: 5vw;
+  width: 70%;
+  font-size: 16px;
+  color: #6d6d6d;
+  /* display: flex;
+  align-items: center; */
+}
+
+.add form {
+  gap: 20px;
+}
+
+.add-img-upload img {
+  width: 120px;
+  cursor: pointer;
+}
+
+.add-product-name,
+.add-product-description {
+  width: max(40%, 280px);
+}
+
+.add-product-name input,
+.add-product-description textarea {
+  padding: 10px;
+}
+
+.add-category-price {
+  display: flex;
+  gap: 20px;
+}
+
+.add-category-price select,
+.add-category-price input {
+  max-width: 120px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.add-btn {
+  max-width: 120px;
+  border: none;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* toastyfiy css */
+.toastBody {
+  font-family: "Atlas Grotesk Web", Arial, Helvetica, sans-serif;
+  color: #10171d; /* #10171D */
+  font-size: 0.875rem !important;
+}
+
+@media (max-width: 600px) {
+  .add {
+    font-size: 13px;
+  }
+  .add-product-name,
+  .add-product-description {
+    width: max(40%, 240px);
+  }
+}

@@ -1,0 +1,62 @@
+.order-add h3 {
+  margin-left: 10px;
+  margin-top: 30px;
+}
+.order-add {
+  margin-left: 10px;
+}
+
+/* .order-add h3 {
+  margin-left: 15px;
+} */
+.order-item {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 30px;
+  border: 1px solid rgb(247, 186, 81);
+  padding: 20px;
+  margin: 30px 0px;
+  margin-right: 50px;
+  font-size: 14px;
+  color: #505050;
+}
+
+.order-item-food,
+.order-item-name {
+  font-weight: 600;
+}
+
+.order-item-name {
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+.order-item-address {
+  margin-bottom: 10px;
+}
+
+.order-item select {
+  background-color: #ffe8e4;
+  border: 1px solid rgb(247, 186, 81);
+  width: max(12vw, 120px);
+  border-radius: 4px;
+  outline: none;
+  padding: 10px;
+}
+
+@media (max-width: 1000px) {
+  .order-item {
+    font-size: 12px;
+    grid-template-columns: 0.5fr 2fr 1fr;
+    padding: 15px 8px;
+    margin-left: 9px;
+  }
+  .order-item select {
+    padding: 5px;
+    font-size: 12px;
+  }
+  .order-item img {
+    width: 40px;
+  }
+}

@@ -1,14 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Outfit;
-  scroll-behavior: smooth;
+  font-family: outfit;
 }
 
 body {
   min-height: 100vh;
+  background-color: #fcfcfc;
 }
 
 a {
@@ -16,16 +17,22 @@ a {
   color: inherit;
 }
 
-.app {
-  width: 80%;
-  margin: auto;
+hr {
+  border: none;
+  height: 1px;
+  background-color: #a9a9a9;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.app-content {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.cursor {
+  cursor: pointer;
 }

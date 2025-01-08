@@ -1,23 +1,18 @@
-import React, { useState } from "react";
-import NavBar from "./Componets/NavBar/NavBar";
+import React from "react";
+import Navbar from "./components/Navbar/Navbar";
+import Sidebar from "./components/sidebar/Sidebar";
 import { Route, Routes } from "react-router-dom";
-import Home from "./Pages/Home/Home";
-import Cart from "./Pages/Cart/Cart";
-import PlaceOrder from "./Pages/PlaceOrders/PlaceOrder";
-import Footer from "./Componets/Footer/Footer";
-import GoToTop from "./Componets/GoToTop/GoToTop";
-import LoginPopup from "./Componets/LoginPopup/LoginPopup";
+import Add from "./pages/Add/Add";
+import List from "./pages/List/List";
+import Orders from "./pages/Orders/Orders";
 import { ToastContainer, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Verifyed from "./Pages/Verify/Verifyed";
-import MyOrders from "./Pages/MyOrders/MyOrders";
 
 const App = () => {
-  const [showlogin, setShowlogin] = useState(false);
+  const url = "http://localhost:4000";
 
   return (
-    <>
-      {showlogin ? <LoginPopup setShowlogin={setShowlogin} /> : <></>}
+    <div>
       <ToastContainer
         position="top-right"
         autoClose={3000}
@@ -32,20 +27,18 @@ const App = () => {
         transition={Bounce}
         bodyClassName="toastBody"
       />
-      <div className="app">
-        <NavBar setShowlogin={setShowlogin} />
 
+      <Navbar />
+      <hr />
+      <div className="app-content">
+        <Sidebar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/order" element={<PlaceOrder />} />
-          <Route path="/verify" element={<Verifyed />} />
-          <Route path="/myorders" element={<MyOrders />} />
+          <Route path="/add" element={<Add url={url} />} />
+          <Route path="/list" element={<List url={url} />} />
+          <Route path="/orders" element={<Orders url={url} />} />
         </Routes>
       </div>
-      <GoToTop />
-      <Footer />
-    </>
+    </div>
   );
 };
 
