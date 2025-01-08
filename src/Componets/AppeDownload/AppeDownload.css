@@ -1,0 +1,25 @@
+.appe-download {
+  margin: auto auto;
+  margin-top: 100px;
+  font-size: max(3vw, 20px);
+  text-align: center;
+  font-weight: 500;
+}
+
+.food-app-img {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.food-app-img img {
+  width: max-content;
+  max-width: 180px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.food-app-img img:hover {
+  transform: scale(1.05);
+}

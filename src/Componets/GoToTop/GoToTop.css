@@ -1,0 +1,35 @@
+.top-btn {
+  font-size: 1.7rem;
+  width: 3rem;
+  height: 3rem;
+  color: #fff;
+  background-color: rgb(247, 186, 81);
+  /* box-shadow: salmon; */
+  border-radius: 50%;
+  position: fixed;
+  bottom: 5rem;
+  right: 5rem;
+  z-index: 999;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-btn-icon {
+  animation: gototop 1.2s linear infinite alternate-reverse;
+}
+@keyframes gototop {
+  0% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0.1rem);
+  }
+}
+
+@media (max-width: 500px) {
+  .top-btn {
+    right: 1rem;
+  }
+}
